@@ -1,0 +1,19 @@
+@import '~vuetify/src/stylus/settings/_variables'
+ 
+
+$material-dark.background = rgb(245, 245, 245)
+
+/*
+$material-light.icons.active = rgb(245, 0, 0)
+$material-dark.icons.active = rgb(245, 0, 0)
+*/
+
+
+@import '~vuetify/src/stylus/main'
+
+
+
+v-tabs__bar($material)
+  background-color: $material-light.app-bar
+
+theme(v-tabs__bar, "v-tabs__bar")

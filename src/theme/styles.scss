@@ -1,0 +1,308 @@
+﻿@import "fonts.css";
+@import 'mixins.scss';
+@import "override.scss";
+
+html {
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+    font-size: 13px;
+}
+
+@media screen and (min-width: 960px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+:root {
+    --header-height: 56px;
+    --subheader-height: 48px;
+}
+
+label:not(.v-label) {
+    color: var(--v-form-text-lighten1);
+    font-weight: 500;
+    letter-spacing: 0.6px;
+}
+
+.hidden {
+    display: none;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.overflow-y {
+    overflow-y: auto;
+}
+
+.overflow-x {
+    overflow-x: auto;
+}
+
+.scroll-y {
+    overflow-y: scroll;
+}
+
+.scroll-x {
+    overflow-x: scroll;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.dock-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.dock-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.dock-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.dock-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.text-color {
+    color: var(--v-form-text-base) !important;
+}
+
+.toolbar {
+    background-color: var(--v-toolbar-base);
+}
+
+*:focus {
+    outline: none;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-padding-important {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-margin-important {
+    margin: 0 !important;
+}
+
+.fill-column {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.fill-row {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.fade-in {
+    -webkit-transition: opacity 1s !important;
+    transition: opacity 1s !important;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 3s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.absolute-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.divider-right {
+    border-right: solid 1px var(--v-divider-base);
+}
+
+.unselectable {
+    @include unselectable();
+}
+
+.hoverable {
+    cursor: pointer;
+
+    &:hover > *:before {
+        background-color: var(--v-button-text-base);
+        border-radius: inherit;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        opacity: 0.12;
+        -webkit-transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+        transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+        width: 100%;
+    }
+}
+
+.icon-color {
+    color: var(--v-icon-base);
+}
+
+.focus-color {
+    color: var(--v-focus-base);
+}
+
+.flex-scrollbar {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.flex-scrollbar-subheader {
+    overflow-y: auto;
+    flex: 1 1 auto;
+    height: calc(100% - var(--subheader-height));
+}
+
+.drop-shadow {
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 2px 4px -3px #000000;
+    -moz-box-shadow: 0 2px 4px -3px #000000;
+    box-shadow: 0 2px 4px -3px #000000;
+}
+
+
+.input-field {
+
+    .v-select-list {
+        background-color: var(--input-color) !important;
+
+        .v-list > div:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .v-select {
+        //font-size: 14px;
+        //font-weight: 500;
+    }
+}
+
+.delete-color {
+    color: var(--delete-color);
+}
+
+.scroll-y {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.radius-top {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.border-top {
+    border-top: solid 1px var(--divider-color);
+}
+
+.border-left {
+    border-left: solid 1px var(--divider-color);
+}
+
+.border-right {
+    border-right: solid 1px var(--divider-color);
+}
+
+.border-bottom {
+    border-bottom: solid 1px var(--divider-color);
+}
+
+.clickable-link {
+    color: var(--clickable-color);
+}
+
+/* Always show Safari scrollbars */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 10px;
+    background: rgb(235, 235, 235);
+    //border-top: solid 1px rgb(215, 220, 225);
+    //border-left: solid 1px rgb(215, 220, 225);
+    //border-right: solid 1px rgb(215, 220, 225);
+    //border: solid 1px red;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgb(220, 220, 220);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.starship-field {
+    min-height: 38px;
+}

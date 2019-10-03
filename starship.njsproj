@@ -1,0 +1,382 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>starship</Name>
+    <RootNamespace>starship</RootNamespace>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7f0bc6b8-5759-45b3-a534-9a9e628ebb1d</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>node_modules\@vue\cli-service\bin\vue-cli-service.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+    <ScriptArguments>serve</ScriptArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      npm run build
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="src\components\charts\starship-pie-chart.vue" />
+    <Content Include="src\components\flex-container.vue" />
+    <Content Include="src\components\starship-unsaved-changes.vue" />
+    <Content Include="src\components\starship-tag.vue" />
+    <Content Include="src\components\starship-tooltip.vue" />
+    <Content Include="src\components\starship-surface.vue" />
+    <Content Include="src\components\starship-data-tree.vue" />
+    <Content Include="src\components\starship-confirm.vue" />
+    <Content Include="src\components\starship-dropdown-tree.vue" />
+    <Content Include="src\components\starship-google-map.vue" />
+    <Content Include="src\components\starship-menu2.vue" />
+    <Content Include="src\components\starship-table.vue" />
+    <Content Include="src\components\starship-treenode.vue" />
+    <Content Include="src\components\starship-treeview.vue" />
+    <Content Include="src\components\starship-textarea.vue" />
+    <Content Include="src\components\starship-toggle.vue" />
+    <Content Include="src\components\starship-datepicker.vue" />
+    <Content Include="src\components\starship-expander.vue" />
+    <Content Include="src\components\starship-users.vue" />
+    <Content Include="src\components\starship-tags.vue" />
+    <Content Include="src\components\starship-select.vue" />
+    <Content Include="src\components\starship-grid-form.vue" />
+    <Content Include="src\components\starship-search.vue" />
+    <Content Include="src\components\starship-combobox.vue" />
+    <Content Include="src\components\starship-rating.vue" />
+    <Content Include="src\components\starship-stat.vue" />
+    <Content Include="src\components\starship-input.vue" />
+    <Content Include="src\components\starship-timeline.vue" />
+    <Content Include="src\components\form-group.vue" />
+    <Content Include="src\components\starship-autocomplete.vue" />
+    <Content Include="src\components\starship-data-manager.vue" />
+    <Content Include="src\components\starship-importer.vue" />
+    <Content Include="src\components\starship-fade.vue" />
+    <Content Include="src\components\starship-entity-editor.vue" />
+    <Content Include="src\components\starship-editor-dialog.vue" />
+    <Content Include="src\components\starship-splitter.vue" />
+    <Content Include="src\components\starship-page.vue" />
+    <Content Include="src\components\page-column.vue" />
+    <Content Include="src\components\starship-gauge.vue" />
+    <Content Include="src\components\starship-icon.vue" />
+    <Content Include="src\components\starship-permissions.vue" />
+    <Content Include="src\components\starship-checkbox.vue" />
+    <Content Include="src\components\starship-image.vue" />
+    <Content Include="src\components\starship-date.vue" />
+    <Content Include="src\components\starship-toolbar.vue" />
+    <Content Include="src\components\starship-virtual-container.vue" />
+    <Content Include="src\components\starship-icon-picker.vue" />
+    <Content Include="src\components\starship-editor.vue" />
+    <Content Include="src\components\starship-dropdown.vue" />
+    <Content Include="src\components\starship-richtext.vue" />
+    <Content Include="src\components\prompt-button.vue" />
+    <Content Include="src\components\starship-menu.vue" />
+    <Content Include="src\components\timeline\timeline-event.vue" />
+    <Content Include="src\components\timeline\timeline-notification.vue" />
+    <Content Include="src\components\toolbar-button.vue" />
+    <Content Include="src\components\starship-breadcrumb.vue" />
+    <Content Include="src\components\starship-button.vue" />
+    <Content Include="src\components\starship-chart.vue" />
+    <Content Include="src\components\starship-confetti.vue" />
+    <Content Include="src\components\starship-dialog.vue" />
+    <Content Include="src\components\starship-dropzone.vue" />
+    <Content Include="src\components\starship-file-manager.vue" />
+    <Content Include="src\components\starship-files.vue" />
+    <Content Include="src\components\starship-fireworks.vue" />
+    <Content Include="src\components\pulse-effect.vue" />
+    <Content Include="src\components\page-section.vue" />
+    <Content Include="src\components\starship-help.vue" />
+    <Content Include="src\components\starship-loader.vue" />
+    <Content Include="src\components\starship-nav.vue" />
+    <Content Include="src\components\starship-notifications.vue" />
+    <Content Include="src\components\starship-prompt.vue" />
+    <Content Include="src\components\starship-route-breadcrumb.vue" />
+    <Content Include="src\components\starship-tabs.vue" />
+    <Content Include="src\components\starship-text.vue" />
+    <Content Include="src\theme\images\logo.png" />
+    <Content Include="src\theme\images\team.png" />
+    <Content Include="src\theme\starbase-styles.scss" />
+    <Content Include="src\theme\fonts.css" />
+    <Content Include="src\theme\fonts\avenir\avenir.eot" />
+    <Content Include="src\theme\fonts\avenir\avenir.svg" />
+    <Content Include="src\theme\fonts\avenir\avenir.ttf" />
+    <Content Include="src\theme\fonts\avenir\avenir.woff" />
+    <Content Include="src\theme\fonts\avenir\avenir.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Black.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Black.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Black.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-BlackItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-BlackItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-BlackItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Bold.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Bold.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Bold.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-BoldItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-BoldItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-BoldItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraBold.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraBold.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraBold.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraBoldItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraBoldItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraBoldItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraLight.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraLight.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraLight.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraLightItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraLightItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ExtraLightItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Italic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Italic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Italic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Light.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Light.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Light.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-LightItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-LightItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-LightItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Medium.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Medium.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Medium.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-MediumItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-MediumItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-MediumItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Regular.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Regular.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Regular.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-SemiBold.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-SemiBold.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-SemiBold.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-SemiBoldItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-SemiBoldItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-SemiBoldItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Thin.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Thin.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-Thin.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ThinItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ThinItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat-ThinItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\Montserrat.css" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Black.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Black.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Black.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-BlackItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-BlackItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-BlackItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Bold.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Bold.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Bold.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-BoldItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-BoldItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-BoldItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraBold.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraBold.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraBold.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraBoldItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraBoldItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraBoldItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraLight.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraLight.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraLight.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraLightItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraLightItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ExtraLightItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Italic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Italic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Italic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Light.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Light.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Light.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-LightItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-LightItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-LightItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Medium.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Medium.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Medium.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-MediumItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-MediumItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-MediumItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Regular.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Regular.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Regular.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-SemiBold.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-SemiBold.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-SemiBold.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-SemiBoldItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-SemiBoldItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-SemiBoldItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Thin.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Thin.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-Thin.woff2" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ThinItalic.eot" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ThinItalic.woff" />
+    <Content Include="src\theme\fonts\montserrat\MontserratAlternates-ThinItalic.woff2" />
+    <Content Include="src\theme\fonts\montserrat\README.MD" />
+    <Content Include="src\theme\fonts\nexa\NexaBold.otf" />
+    <Content Include="src\theme\fonts\nexa\NexaLight.otf" />
+    <Content Include="src\theme\images\avatar.png" />
+    <Content Include="src\theme\main.styl" />
+    <Content Include="src\theme\mixins.scss" />
+    <Content Include="src\theme\override.scss" />
+    <Content Include="src\theme\core-styles.scss" />
+    <Content Include="src\theme\styles.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\components\" />
+    <Folder Include="src\components\charts\" />
+    <Folder Include="src\components\timeline\" />
+    <Folder Include="src\core\" />
+    <Folder Include="src\formatters\" />
+    <Folder Include="src\mixins\" />
+    <Folder Include="src\data\" />
+    <Folder Include="src\entities\" />
+    <Folder Include="src\models\" />
+    <Folder Include="src\services\" />
+    <Folder Include="src\plugins\" />
+    <Folder Include="src\theme\" />
+    <Folder Include="src\theme\fonts\" />
+    <Folder Include="src\theme\fonts\avenir\" />
+    <Folder Include="src\theme\fonts\montserrat\" />
+    <Folder Include="src\theme\fonts\nexa\" />
+    <Folder Include="src\theme\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="babel.config.js" />
+    <Compile Include="src\components\mix-panel.js" />
+    <Compile Include="src\components\charge-bee.js" />
+    <Compile Include="src\components\index.js" />
+    <Compile Include="src\components\app-cues.js" />
+    <Compile Include="src\components\scoped-node.js" />
+    <Compile Include="src\core\ArrayExtensions.js" />
+    <Compile Include="src\core\ChangeTracker.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\core\Component.js" />
+    <Compile Include="src\core\DataProvider.js" />
+    <Compile Include="src\core\Color.js" />
+    <Compile Include="src\core\Entity.js" />
+    <Compile Include="src\core\EventBus.js" />
+    <Compile Include="src\core\User.js" />
+    <Compile Include="src\core\EventContext.js" />
+    <Compile Include="src\core\EntityMapper.js" />
+    <Compile Include="src\core\guid.js" />
+    <Compile Include="src\core\index.js" />
+    <Compile Include="src\core\Page.js" />
+    <Compile Include="src\core\Random.js" />
+    <Compile Include="src\core\Repository.js" />
+    <Compile Include="src\core\Router.js" />
+    <Compile Include="src\core\DateHelper.js" />
+    <Compile Include="src\core\Util.js" />
+    <Compile Include="src\data\fieldTypes.js" />
+    <Compile Include="src\data\index.js" />
+    <Compile Include="src\data\icons.js" />
+    <Compile Include="src\data\states.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\entities\Claim.js" />
+    <Compile Include="src\entities\DataSet.js" />
+    <Compile Include="src\entities\Event.js" />
+    <Compile Include="src\entities\Field.js" />
+    <Compile Include="src\entities\Type.js" />
+    <Compile Include="src\entities\Group.js" />
+    <Compile Include="src\entities\index.js" />
+    <Compile Include="src\entities\Permission.js" />
+    <Compile Include="src\formatters\camelcase.js" />
+    <Compile Include="src\formatters\camelcaseWithSpaces.js" />
+    <Compile Include="src\formatters\pluralize.js" />
+    <Compile Include="src\formatters\yesno.js" />
+    <Compile Include="src\formatters\capitalize.js" />
+    <Compile Include="src\formatters\time.js" />
+    <Compile Include="src\formatters\date.js" />
+    <Compile Include="src\formatters\index.js" />
+    <Compile Include="src\formatters\money.js" />
+    <Compile Include="src\formatters\phone.js" />
+    <Compile Include="src\formatters\random.js" />
+    <Compile Include="src\main.js" />
+    <Compile Include="src\mixins\ValueModel.js" />
+    <Compile Include="src\mixins\Editor.js" />
+    <Compile Include="src\mixins\BindSlots.js" />
+    <Compile Include="src\mixins\index.js" />
+    <Compile Include="src\models\index.js" />
+    <Compile Include="src\models\DynamicField.js" />
+    <Compile Include="src\models\TreeViewNode.js" />
+    <Compile Include="src\plugins\BasePlugin.js" />
+    <Compile Include="src\plugins\EventsPlugin.js" />
+    <Compile Include="src\plugins\FilesPlugin.js" />
+    <Compile Include="src\plugins\index.js" />
+    <Compile Include="src\plugins\LoadingPlugin.js" />
+    <Compile Include="src\plugins\ConfirmPlugin.js" />
+    <Compile Include="src\plugins\NotificationPlugin.js" />
+    <Compile Include="src\plugins\IconsPlugin.js" />
+    <Compile Include="src\plugins\UnsavedChangesPlugin.js" />
+    <Compile Include="src\plugins\RouterEventsPlugin.js" />
+    <Compile Include="src\services\ChargeBeeService.js" />
+    <Compile Include="src\services\EntityTreeBuilder.js" />
+    <Compile Include="src\services\EmailService.js" />
+    <Compile Include="src\services\index.js" />
+    <Compile Include="src\theme\starbase-theme.js" />
+    <Compile Include="src\theme\core-theme.js" />
+    <Compile Include="src\theme\dark-theme.js" />
+    <Compile Include="src\theme\index.js" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,32 @@
+﻿@import url("fonts/montserrat/Montserrat.css");
+
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+    font-family: 'NexaBold';
+    src: url('fonts/nexa/NexaBold.otf') format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NexaLight';
+    src: url('fonts/nexa/NexaLight.otf') format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AvenirLight";
+    src: url("fonts/avenir/avenir.eot");
+    src: url("fonts/avenir/avenir.eot") format("eot"),
+         url("fonts/avenir/avenir.woff2") format("woff2"),
+         url("fonts/avenir/avenir.woff") format("woff"),
+         url("fonts/avenir/avenir.ttf") format("truetype"),
+         url("fonts/avenir/avenir.svg") format("svg");
+}
