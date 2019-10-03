@@ -1,36 +1,55 @@
 {
-    "name": "starship-vue",
-    "version": "0.1.0",
-    "private": false,
-    "scripts": {
-        "serve": "vue-cli-service serve --mode development",
-        "build": "vue-cli-service build"
-    },
-    "main": "src/main.js",
-    "dependencies": {},
-    "devDependencies": {
-        "@riophae/vue-treeselect": "0.0.38",
-        "@fortawesome/fontawesome-pro": "^5.7.2",
-        "@mdi/font": "^3.4.93",
-        "@vue/cli-plugin-babel": "^3.4.0",
-        "@vue/cli-service": "^3.4.0",
-        "node-sass": "^4.11.0",
-        "sass-loader": "^7.1.0",
-        "style-loader": "^0.23.1",
-        "stylus": "^0.54.5",
-        "stylus-loader": "^3.0.2",
-        "vue-cli-plugin-vuetify": "^0.4.6",
-        "vue-template-compiler": "^2.6.8",
-        "vuetify-loader": "^1.2.1"
-    },
-    "postcss": {
-        "plugins": {
-            "autoprefixer": {}
-        }
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not ie <= 8"
-    ]
+  "name": "@starship-consulting/starship-vue",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build"
+  },
+  "main": "src/main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@riophae/vue-treeselect": "0.0.38",
+    "@fortawesome/fontawesome-pro": "^5.7.2",
+    "@mdi/font": "^3.4.93",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-vuetify": "^0.4.6",
+    "vue-template-compiler": "^2.6.8",
+    "vuetify-loader": "^1.2.1"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "description": "Vue component library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starship-consulting/starship-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "starship",
+    "consulting",
+    "web",
+    "ui",
+    "components"
+  ],
+  "author": "Josh Griffith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starship-consulting/starship-vue/issues"
+  },
+  "homepage": "https://github.com/starship-consulting/starship-vue#readme"
 }
